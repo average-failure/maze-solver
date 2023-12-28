@@ -58,6 +58,9 @@ public class MazeSolver {
                 main.App.print(maze.grid(), 20); // For animation
         }
 
+        if (solution[maze.endRow()] == null || solution[maze.endRow()][maze.endColumn()] == null)
+            throw new IllegalArgumentException("No solution exists");
+
         tracePath();
 
         return maze;
